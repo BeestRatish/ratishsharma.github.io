@@ -1,147 +1,206 @@
 // 
-// Dark Theme
+// Dark Theme - Soft dark with good contrast
 // 
 
 [data-theme="dark"] {
-    --primary-blue: #3b82f6;
-    --primary-purple: #8b5cf6;
-    
     body {
-        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        background: #121212;
         color: #e0e0e0;
-        
-        &::before {
-            background: 
-                radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
-        }
     }
     
-    h1 {
-        background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
+    h1, h2, h3, h4, h5, h6 {
+        color: #ffffff;
     }
     
     h2 {
-        color: #f0f0f0;
-        
-        &::after {
-            background: linear-gradient(90deg, #60a5fa, #a78bfa);
-        }
+        border-bottom-color: #ffffff;
+        color: #ffffff;
     }
     
     h3 {
-        color: #e0e0e0;
+        color: #ffffff;
+    }
+    
+    h4 {
+        color: #ffffff;
     }
     
     .subheading {
-        color: #d0d0d0;
+        color: #e0e0e0;
+        font-size: 1.1rem;
+        font-weight: 400;
     }
     
     p.lead {
-        color: #c0c0c0;
+        color: #e0e0e0;
+        font-size: 1.1rem;
+        font-weight: 400;
     }
     
     .text-primary {
-        color: #60a5fa !important;
+        color: #ffffff !important;
+        font-weight: 400;
     }
     
     .text-muted {
-        color: #9ca3af !important;
+        color: #b0b0b0 !important;
+        font-size: 1rem;
+        font-weight: 400;
     }
     
     section.resume-section {
-        background: rgba(30, 30, 46, 0.95);
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: #121212;
+        color: #e0e0e0;
     }
     
     hr.m-0 {
-        background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.4), transparent);
+        background: #2a2a2a;
     }
     
     .social-icons .social-icon {
-        background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
-        box-shadow: 0 4px 6px rgba(59, 130, 246, 0.4);
+        background: #ffffff;
+        color: #121212;
+        border-color: #ffffff;
         
         &:hover {
-            box-shadow: 0 8px 16px rgba(59, 130, 246, 0.5);
-            background: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%);
+            background: #e0e0e0;
+            color: #121212;
+            border-color: #ffffff;
         }
     }
     
-    .dev-icons .list-inline-item i {
-        color: #60a5fa;
+    .dev-icons .list-inline-item {
+        i {
+            color: #ffffff;
+        }
         
         &:hover {
-            color: #a78bfa;
-            filter: drop-shadow(0 4px 8px rgba(139, 92, 246, 0.5));
+            i {
+                color: #b0b0b0;
+            }
         }
     }
     
     ul li {
-        color: #d0d0d0;
+        color: #e0e0e0;
+        
+        &::marker {
+            color: #ffffff;
+        }
+    }
+    
+    // Experience, Skills, Projects sections
+    section.resume-section {
+        .d-flex {
+            h3 {
+                color: #ffffff;
+            }
+            
+            .subheading {
+                color: #e0e0e0;
+            }
+        }
+        
+        ul li {
+            color: #e0e0e0;
+        }
+    }
+    
+    .education-item {
+        .border-bottom {
+            border-color: #2a2a2a !important;
+        }
+    }
+    
+    .skill-group {
+        h4 {
+            border-bottom-color: #2a2a2a;
+            color: #ffffff;
+            
+            &::after {
+                background: #ffffff;
+            }
+        }
+        
+        ul.fa-ul li {
+            color: #e0e0e0;
+        }
+        
+        p.text-muted {
+            color: #b0b0b0;
+        }
+        
+        p {
+            color: #e0e0e0;
+        }
+    }
+    
+    // Projects section
+    .d-flex.flex-column {
+        h3 {
+            color: #ffffff;
+        }
+        
+        .subheading {
+            color: #e0e0e0;
+        }
+        
+        ul li {
+            color: #e0e0e0;
+        }
     }
     
     a {
-        color: #60a5fa;
+        color: #ffffff;
         
         &:hover {
-            color: #93c5fd;
+            color: #b0b0b0;
+            opacity: 0.9;
         }
     }
     
     #sideNav {
-        background: linear-gradient(180deg, #1e3a8a 0%, #5b21b6 100%);
-        box-shadow: 4px 0 20px rgba(0, 0, 0, 0.5);
+        background: #1a1a1a;
+        border-right-color: #2a2a2a;
+        
+        .navbar-nav .nav-item .nav-link {
+            color: #ffffff;
+            
+            &:hover,
+            &.active {
+                background: #2a2a2a;
+                color: #ffffff;
+            }
+        }
+        
+        .navbar-toggler {
+            border-color: #ffffff;
+            
+            &:hover {
+                border-color: #b0b0b0;
+            }
+            
+            .navbar-toggler-icon {
+                background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+            }
+        }
+        
+        .img-profile {
+            border-color: #ffffff;
+            
+            &:hover {
+                border-color: #b0b0b0;
+            }
+        }
+        
+        .theme-toggle-btn {
+            border-color: #ffffff;
+            color: #ffffff;
+            
+            &:hover {
+                background: #2a2a2a;
+            }
+        }
     }
-}
-
-// Smooth transitions for theme changes
-* {
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-}
-
-// Navigation link animations
-.nav-link {
-    position: relative;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    
-    &::after {
-        content: '';
-        position: absolute;
-        width: 0;
-        height: 2px;
-        bottom: 0;
-        left: 50%;
-        background: currentColor;
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        transform: translateX(-50%);
-    }
-    
-    &:hover::after,
-    &.active::after {
-        width: 80%;
-    }
-}
-
-// Section fade-in animation
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-section.resume-section {
-    animation: fadeInUp 0.6s ease-out;
-    opacity: 1;
-    transform: translateY(0);
 }
 

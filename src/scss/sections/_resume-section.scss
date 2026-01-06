@@ -7,10 +7,10 @@ section.resume-section {
     align-items: center;
     padding-left: 1rem;
     padding-right: 1rem;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
     max-width: 75rem;
-    transition: all 0.3s ease;
+    transition: opacity 0.5s ease, transform 0.5s ease;
 
     .resume-section-content {
         width: 100%;
@@ -18,29 +18,111 @@ section.resume-section {
     
     ul {
         li {
-            margin-bottom: 0.75rem;
-            line-height: 1.7;
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
             position: relative;
-            padding-left: 0.5rem;
+            padding-left: 0;
+            color: $gray-700;
+            font-size: 1rem;
+            font-weight: 400;
+            transition: color 0.3s ease;
             
             &::marker {
-                color: $primary-blue;
+                color: $black;
             }
         }
     }
     
     .d-flex {
-        transition: all 0.3s ease;
+        transition: transform 0.2s ease, opacity 0.2s ease;
+        margin-bottom: 2rem;
         
         &:hover {
             transform: translateX(5px);
+        }
+    }
+    
+    // Education Section Styling
+    .education-item {
+        transition: transform 0.2s ease, opacity 0.2s ease;
+        
+        &:hover {
+            transform: translateX(3px);
+        }
+        
+        h3 {
+            // Use global h3 styles - no override
+        }
+        
+        .subheading {
+            // Use global subheading styles - no override
+        }
+        
+        .border-bottom {
+            border-color: $gray-200 !important;
+        }
+    }
+    
+    // Skills Section Styling
+    .skills-container {
+        max-width: 800px;
+    }
+    
+    .skill-group {
+        transition: transform 0.2s ease;
+        
+        &:hover {
+            transform: translateX(5px);
+        }
+        
+        h4 {
+            // Use global h4 styles
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid $gray-200;
+            position: relative;
+            
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: -1px;
+                left: 0;
+                width: 40px;
+                height: 1px;
+                background: $black;
+            }
+        }
+        
+        ul.fa-ul {
+            margin-left: 1.5rem;
+            margin-bottom: 0;
+            
+            li {
+                margin-bottom: 0.5rem;
+                line-height: 1.6;
+                font-size: 1rem;
+                font-weight: 400;
+                color: $gray-700;
+                
+                .fa-li {
+                    left: -1.5rem;
+                    width: 1.2em;
+                }
+            }
+        }
+        
+        p {
+            color: $gray-700;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.6;
         }
     }
 }
 
 @include media-breakpoint-up(md) {
     section.resume-section {
-        min-height: 100vh;
+        min-height: auto;
     }
 }
 
@@ -48,7 +130,7 @@ section.resume-section {
     section.resume-section {
         padding-left: 3rem;
         padding-right: 3rem;
-        padding-top: 5rem;
-        padding-bottom: 5rem;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
     }
 }
